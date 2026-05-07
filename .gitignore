@@ -1,13 +1,17 @@
 *._*
 synthpop/demo/*.png
+synthpop/demo/*/*.png
 synthpop/demo/*/*.pdf
+synthpop/demo/galaxia_time_tests
+synthpop/demo/gums_compare
 synthpop/examine_model.ipynb
 synthpop/data/extinction
 synthpop/data/isochrones
 outputfiles
 synthpop/config_files/ls4*
 synthpop/models/test_single
-synthpop/models_besancon_Robin2003_with_dark
+synthpop/models/besancon_Robin2003_with_dark
+synthpop/tests
 
 *.DS_Store
 
