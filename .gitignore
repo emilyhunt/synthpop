@@ -6,6 +6,7 @@ synthpop/data/extinction
 synthpop/data/isochrones
 outputfiles
 synthpop/config_files/ls4*
+scratch_stuff
 
 *.DS_Store
 
