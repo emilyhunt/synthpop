@@ -937,7 +937,7 @@ class Population:
             if self.skip_lowmass_stars:
                 logger.info(f'det_mass_loss_corr_incl_lowmass = {em_incl / im_incl}')
 
-            logger.debug(f'average_mass_per_star = {np.sum(population_df["Mass"].to_numpy()):.4f}')
+            logger.debug(f'average_mass_per_star = {np.mean(population_df["Mass"].to_numpy()):.4f}')
             if self.skip_lowmass_stars:
                 mean_mass = em_incl * ((1 - frac_lowmass[1]) / gg.size()).sum()
                 logger.debug(f'average_mass_per_star_incl_lowmass = {mean_mass:.4f}')
