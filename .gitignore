@@ -6,6 +6,8 @@ synthpop/data/extinction
 synthpop/data/isochrones
 outputfiles
 synthpop/config_files/ls4*
+synthpop/models/test_single
+synthpop/models_besancon_Robin2003_with_dark
 
 *.DS_Store
 
