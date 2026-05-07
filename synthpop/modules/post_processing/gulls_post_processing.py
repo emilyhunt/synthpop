@@ -72,8 +72,9 @@ class GullsPostProcessing(PostProcessing):
         dataframe = dataframe[cols]
         
         # Get index of F184 band and insert K213 after that
-        idx = dataframe.columns.get_loc("F184")+1
-        dataframe.insert(idx, "K213", k213)
+        if 'K213' not in dataframe:
+            idx = dataframe.columns.get_loc("F184")+1
+            dataframe.insert(idx, "K213", k213)
         
         
         # Replace NaNs with 99 for magnitude columns, and a non-physical
