@@ -1,9 +1,12 @@
 *._*
 synthpop/demo/*.png
 synthpop/demo/*/*.pdf
+synthpop/examine_model.ipynb
 synthpop/data/extinction
 synthpop/data/isochrones
 outputfiles
+synthpop/config_files/ls4*
+scratch_stuff
 
 *.DS_Store
 
