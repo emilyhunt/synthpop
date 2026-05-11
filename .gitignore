@@ -7,6 +7,8 @@ synthpop/data/isochrones
 outputfiles
 synthpop/config_files/ls4*
 scratch_stuff
+synthpop/models/besancon_Robin2014_INPROGRESS
+synthpop/config_files/old
 
 *.DS_Store
 
