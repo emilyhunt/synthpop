@@ -21,7 +21,7 @@ class Koshimoto2021Bulge(Kinematics):
             ):
         super().__init__(**kwargs) # initialises self.coord_transform & self.density_class
         self.v0_stream = v0_stream  # km/s
-        self.y0_stream = y0_stream  # pc
+        self.y0_stream = y0_stream  # kpc
         self.C_par_r = C_par_r  # unitless
         self.C_perp_r = C_perp_r  # unitless
         self.C_par_z = C_par_z  # unitless
