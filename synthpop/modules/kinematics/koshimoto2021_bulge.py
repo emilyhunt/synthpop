@@ -82,7 +82,7 @@ class Koshimoto2021Bulge(Kinematics):
         sigma_y = self.vel_disp(abs(xp), abs(yp), abs(zp), 1)
         sigma_z = self.vel_disp(abs(xp), abs(yp), abs(zp), 2)
 
-        # Draw random deviations from circular velocity
+        # Draw random deviations from mean velocity
         dvx = np.random.normal(0, sigma_x)
         dvy = np.random.normal(0, sigma_y)
         dvz = np.random.normal(0, sigma_z)
