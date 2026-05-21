@@ -21,7 +21,7 @@ class Koshimoto2021Bulge(Kinematics):
             ):
         super().__init__(**kwargs) # initialises self.coord_transform & self.density_class
         self.v0_stream = v0_stream  # km/s
-        self.y0_stream = y0_stream  # pc
+        self.y0_stream = y0_stream  # kpc
         self.C_par_r = C_par_r  # unitless
         self.C_perp_r = C_perp_r  # unitless
         self.C_par_z = C_par_z  # unitless
@@ -82,7 +82,7 @@ class Koshimoto2021Bulge(Kinematics):
         sigma_y = self.vel_disp(abs(xp), abs(yp), abs(zp), 1)
         sigma_z = self.vel_disp(abs(xp), abs(yp), abs(zp), 2)
 
-        # Draw random deviations from circular velocity
+        # Draw random deviations from mean velocity
         dvx = np.random.normal(0, sigma_x)
         dvy = np.random.normal(0, sigma_y)
         dvz = np.random.normal(0, sigma_z)

@@ -93,6 +93,7 @@ class Koshimoto2021Disk(Kinematics):
         c1,c2,c3,c4 = 3.822, 0.524, 0.00567, 2.13
 
         # Calculate velocity dispersions in directions of non-rotation
+        # For thick disk, just use betas=0
         sigma_r = self.sigma_r_sun * ((self.pop_age+T_min)/(T_max+T_min))**self.beta_r \
                   * np.exp(-(r-self.sun.r)/self.R_sigma_r)
         sigma_z = self.sigma_z_sun * ((self.pop_age+T_min)/(T_max+T_min))**self.beta_z \
@@ -113,7 +114,8 @@ class Koshimoto2021Disk(Kinematics):
         # Get g array: description after equation 8 in Koshimoto+21
         # Use weird ln/exp stuff to prevent overflow
         g_input_arr = 1/(2*a_arr**2)
-        g_arr = gammasgn(g_input_arr-0.5)*np.exp(g_input_arr + gammaln(g_input_arr - 0.5) - g_input_arr*np.log(g_input_arr) + 0.5*np.log(g_input_arr)) / 2
+        g_arr = gammasgn(g_input_arr-0.5)*np.exp(g_input_arr + gammaln(g_input_arr - 0.5) - 
+                         g_input_arr*np.log(g_input_arr) + 0.5*np.log(g_input_arr)) / 2
         # Get surface density for R_g array values
         surf_dens_arr = np.exp(-R_g_arr/R_d) - c3*a0**c4/R_d**2 * s_arr
         
