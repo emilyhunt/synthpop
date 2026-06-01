@@ -18,7 +18,7 @@ setup(
         'pydantic>=1.10.7'
         ],
     extras_require={
-        'optional': ['astropy>=4.3.1', 'dustmaps>=1.0.10', 'astroquery~=0.4', 'matplotlib~=3.6.2']
+        'optional': ['astropy>=4.3.1', 'dustmaps>=1.0.10', 'astroquery>=0.4', 'matplotlib>=3.6.2']
         },
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown'
